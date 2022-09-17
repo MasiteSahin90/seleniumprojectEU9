@@ -1,18 +1,13 @@
 package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
+import com.cydeo.tests.base.TestBase;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.CRM_Utilities;
-import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
-public class T3_CRM_LOGIN {
+public class T3_CRM_LOGIN extends TestBase {
     /*
     TC #3: Login scenario
  1. Create new test and make set ups
@@ -33,14 +28,7 @@ Helpdesk2@cybertekschool.com  UserUser
 
      */
 
-    public WebDriver driver;
-    @BeforeMethod
-    public void setUp(){
-        driver= WebDriverFactory.getDriver("chrome");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://login1.nextbasecrm.com/");
-    }
+
 
     @Test
     public void method(){
@@ -77,14 +65,6 @@ Helpdesk2@cybertekschool.com  UserUser
 
 
 
-
-
-
-
-    @AfterMethod
-    public void tearDownMethod(){
-        driver.close();
-    }
 
 
 }
