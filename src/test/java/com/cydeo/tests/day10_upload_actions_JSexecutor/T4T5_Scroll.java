@@ -23,26 +23,20 @@ public class T4T5_Scroll {
 
         actions.moveToElement(cydeo).perform();
 
-
-
-    }
-
-
-
-    @Test
-    public void method2(){
-        Driver.getDriver().get("https://practice.cydeo.com/ ");
-
         WebElement home = Driver.getDriver().findElement(By.xpath("//a[@class='nav-link']"));
-
-        Actions actions = new Actions(Driver.getDriver());
 
         BrowserUtils.sleep(2);
 
-        actions.moveToElement(home);
+        actions.moveToElement(home).perform();
+
+        //actions.sendKeys(Keys.PAGE_UP,Keys.PAGE_UP).perform();
+
+        Driver.getDriver().close();
+
 
 
     }
+
 }
 
 
